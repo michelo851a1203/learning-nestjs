@@ -11,7 +11,6 @@ import { StatusEnum } from './tasks.enum';
 @EntityRepository(Tasks)
 export class TaskRepository extends Repository<Tasks> {
   async createTask(name: string, price: number): Promise<Tasks> {
-    // test if data will be automatically generated
     const createdTask = this.create({
       name,
       price,

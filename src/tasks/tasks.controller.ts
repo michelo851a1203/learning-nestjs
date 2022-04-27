@@ -13,7 +13,7 @@ import { TasksService } from './tasks.service';
 
 @Controller('tasks')
 export class TasksController {
-  constructor(@Inject() private tasksService: TasksService) {}
+  constructor(@Inject(TasksService) private tasksService: TasksService) {}
 
   @Get('/all')
   getAllTasksHandler() {
